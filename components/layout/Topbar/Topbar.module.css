@@ -1,0 +1,207 @@
+.topbar {
+  background: #000;
+  color: white;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 24px;
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.leftText {
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.centerText {
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  flex: 1;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rightSection button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rightSection button:hover {
+  color: #c8a96b;
+}
+
+.visitBtn {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.visitBtn:hover {
+  color: #c8a96b;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .topbar {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 10px 14px;
+    min-height: auto;
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .leftText {
+    display: none; /* optional */
+  }
+
+  .centerText {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .rightSection {
+    gap: 14px;
+  }
+
+  .visitBtn {
+    font-size: 13px;
+  }
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .topbar {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 14px;
+    min-height: 38px;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .leftText {
+    display: none;
+  }
+
+  .centerText {
+    flex: unset;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .rightSection {
+    gap: 12px;
+  }
+
+  .rightSection button,
+  .visitBtn {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+.offerText {
+  position: relative;
+  display: inline-block;
+
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #c5a059;
+
+  text-transform: uppercase;
+
+  animation: luxuryGlow 2.5s ease-in-out infinite;
+
+  cursor: default;
+}
+
+/* Golden Shine Line */
+.offerText::after {
+  content: "";
+  position: absolute;
+
+  left: -40%;
+  top: 0;
+
+  width: 30%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: shineMove 3s infinite;
+}
+
+/* Soft Premium Glow */
+@keyframes luxuryGlow {
+  0% {
+    opacity: 0.8;
+    text-shadow: 0 0 0px rgba(197,160,89,0);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 8px rgba(197,160,89,0.4),
+      0 0 18px rgba(197,160,89,0.2);
+  }
+
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 0px rgba(197,160,89,0);
+  }
+}
+
+/* Moving Shine Effect */
+@keyframes shineMove {
+  0% {
+    left: -40%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+
