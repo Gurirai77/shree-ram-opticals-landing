@@ -1,45 +1,45 @@
 import styles from "./OurJourney.module.css";
 import {
   Store,
-  Users,
+  GraduationCap,
   Glasses,
-  ShoppingCart,
+  MapPin,
   Globe,
 } from "lucide-react";
 
 const timeline = [
   {
-    year: "1989",
-    title: "Founded in Sirsa",
-    text: "Started with a vision to provide premium eyewear for every generation.",
+    year: "2013",
+    title: "The Beginning",
+    text: "Started the journey with a passion for premium eyewear and a vision to bring quality optical solutions to every customer.",
     icon: <Store size={22} />,
   },
 
   {
-    year: "2000",
-    title: "Premium Lens Expansion",
-    text: "Expanded our lens technology and introduced high-performance lenses.",
-    icon: <Glasses size={22} />,
+    year: "2014",
+    title: "Learning & Expertise",
+    text: "Traveled to Nashik and Gurugram to gain professional expertise and advanced knowledge in the world of optics and eyewear.",
+    icon: <GraduationCap size={22} />,
   },
 
   {
-    year: "2010",
-    title: "Luxury Collection Launch",
-    text: "Introduced premium international eyewear collections.",
-    icon: <Users size={22} />,
+    year: "2015",
+    title: "Shree Ram Opticals Launched",
+    text: "Officially opened the first Shree Ram Opticals store in Sirsa with a commitment to trust, precision, and premium customer experience.",
+    icon: <MapPin size={22} />,
   },
 
   {
     year: "2018",
-    title: "Multi Store Presence",
-    text: "Expanded across multiple cities with luxury experience stores.",
-    icon: <ShoppingCart size={22} />,
+    title: "Premium Collection Expansion",
+    text: "Expanded our eyewear collection with modern frames, branded sunglasses, and high-quality vision lenses.",
+    icon: <Glasses size={22} />,
   },
 
   {
     year: "2026",
-    title: "Modern Ecommerce Launch",
-    text: "Launched digital shopping experience for customers nationwide.",
+    title: "Digital Presence & Growth",
+    text: "Stepped into the digital era with an enhanced online presence to serve customers with a seamless modern optical experience.",
     icon: <Globe size={22} />,
   },
 ];
@@ -52,11 +52,11 @@ export default function OurJourney() {
         <div className={styles.heading}>
           <p>OUR JOURNEY</p>
 
-          <h2>A Legacy Built on Vision</h2>
+          <h2>A Vision Built with Trust</h2>
 
           <span>
-            From a small beginning to becoming a trusted
-            premium eyewear destination.
+            From learning the craft of optics to becoming
+            a trusted eyewear destination in Sirsa.
           </span>
         </div>
 
@@ -66,7 +66,7 @@ export default function OurJourney() {
           <div className={styles.leftCard}>
             <img
               src="/storefront_vertical.webp"
-              alt="Journey"
+              alt="Shree Ram Opticals Store"
             />
 
             <div className={styles.overlay} />
@@ -74,36 +74,33 @@ export default function OurJourney() {
             <div className={styles.leftContent}>
               <p>CELEBRATING</p>
 
-              <h3>50+</h3>
+              <h3>10+</h3>
 
-              <h4>Years of Trusted Vision</h4>
+              <h4>Years of Trusted Service</h4>
 
               <span>
-                Half a century of innovation,
-                craftsmanship and luxury eyewear experience.
+                Delivering premium eyewear, expert eye care,
+                and trusted customer satisfaction since 2015.
               </span>
 
               {/* Stats */}
               <div className={styles.stats}>
                 <div>
-                  <strong>60+</strong>
-                  <p>Stores</p>
+                  <strong>10K+</strong>
+                  <p>Happy Customers</p>
                 </div>
 
                 <div>
-                  <strong>2M+</strong>
-                  <p>Customers</p>
+                  <strong>1000+</strong>
+                  <p>Frame Styles</p>
                 </div>
 
                 <div>
-                  <strong>5000+</strong>
-                  <p>Styles</p>
+                  <strong>100%</strong>
+                  <p>Trusted Quality</p>
                 </div>
               </div>
 
-              <button>
-                Discover Our Story →
-              </button>
             </div>
           </div>
 

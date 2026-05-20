@@ -96,8 +96,7 @@ export default function CategorySection() {
           {categories.map((item) => (
 
             <Link
-              href="https://maps.app.goo.gl/JEzBJE9TKyXvWFG17"
-              target="_blank"
+              href={item.link}
               rel="noopener noreferrer"
               key={item.id}
               className={`${styles.card} ${item.large ? styles.largeCard : ""

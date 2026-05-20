@@ -42,6 +42,22 @@ const slides = [
       "/ultra_premium_banner_3.png",
     link: "/products",
   },
+  {
+    id: 4,
+    desktopImage:
+      "/premium_brands_mobile_new.png",
+    mobileImage:
+      "/premium_brands_mobile_new.png",
+    link: "/products",
+  },
+  {
+    id: 5,
+    desktopImage:
+      "/tom_ford_mobile_new.png",
+    mobileImage:
+      "/tom_ford_mobile_new.png",
+    link: "/products",
+  },
 ];
 
 export default function HeroSlider() {

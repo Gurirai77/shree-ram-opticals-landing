@@ -38,23 +38,23 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className={styles.navLinks}>
-          <a href="#Home">
+          <a href="/#Home">
             Home
           </a>
 
-          <a href="#COLLECTION">
+          <a href="/#COLLECTION">
             Collection
           </a>
 
-          <a href="#WhyChooseUs">
+          <a href="/#WhyChooseUs">
             Why Choose Us
           </a>
 
-          <a href="#CustomerReviews">
+          <a href="/#CustomerReviews">
             Customer Reviews
           </a>
 
-          <a href="#Brands">Brands</a>
+          <a href="/#Brands">Brands</a>
 
           <a
             href="/#OurJourney"
@@ -86,34 +86,34 @@ export default function Navbar() {
           }`}
       >
         <a
-          href="#Home"
+          href="/#Home"
           onClick={() => setOpen(false)}
         >
           Home
         </a>
 
         <a
-          href="#COLLECTION"
+          href="/#COLLECTION"
           onClick={() => setOpen(false)}
         >
           Collection
         </a>
 
         <a
-          href="#WhyChooseUs"
+          href="/#WhyChooseUs"
           onClick={() => setOpen(false)}
         >
           Why Choose Us
         </a>
 
         <a
-          href="#CustomerReviews"
+          href="/#CustomerReviews"
           onClick={() => setOpen(false)}
         >
           Customer Reviews
         </a>
         <a
-          href="#Brands"
+          href="/#Brands"
           onClick={() => setOpen(false)}
         >
           Brands
