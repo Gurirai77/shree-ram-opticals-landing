@@ -1,7 +1,13 @@
-.section {
-  padding: 70px 0;
+/* components/home/TrendingCollections.module.css */
 
-  background: #ffffff;
+.section {
+  padding: 90px 0;
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f8f6f2
+  );
 }
 
 .container {
@@ -12,12 +18,12 @@
   padding: 0 20px;
 }
 
-/* ---------- HEADING ---------- */
+/* HEADING */
 
 .heading {
   text-align: center;
 
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 
 .heading p {
@@ -26,17 +32,18 @@
   letter-spacing: 3px;
 
   font-size: 11px;
+
   font-weight: 700;
 
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .heading h2 {
-  font-size: 38px;
+  font-size: 44px;
 
   color: #111;
 
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 
   font-weight: 700;
 }
@@ -44,175 +51,170 @@
 .heading span {
   color: #666;
 
-  font-size: 15px;
+  font-size: 16px;
+
+  line-height: 1.8;
 }
 
-/* ---------- GRID ---------- */
+/* GRID */
 
 .grid {
   display: grid;
 
   grid-template-columns: 1.2fr 1fr;
 
-  gap: 20px;
+  gap: 22px;
 }
 
-/* ---------- LARGE CARD ---------- */
+/* LARGE CARD */
 
 .largeCard {
   position: relative;
 
-  height: 580px;
-
-  border-radius: 28px;
+  height: 620px;
 
   overflow: hidden;
+
+  border-radius: 34px;
 
   cursor: pointer;
 }
 
-.largeCard img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition: 0.5s ease;
-}
-
-.largeCard:hover img {
-  transform: scale(1.05);
-}
-
-/* ---------- RIGHT SIDE ---------- */
+/* RIGHT SIDE */
 
 .rightSide {
   display: flex;
+
   flex-direction: column;
 
-  gap: 20px;
+  gap: 22px;
 }
+
+/* SMALL CARD */
 
 .smallCard {
   position: relative;
 
-  height: 280px;
-
-  border-radius: 28px;
+  height: 299px;
 
   overflow: hidden;
+
+  border-radius: 34px;
 
   cursor: pointer;
 }
 
-.smallCard img {
-  width: 100%;
-  height: 100%;
+/* IMAGE */
 
+.image {
   object-fit: cover;
 
-  transition: 0.5s ease;
+  transition: 0.7s ease;
 }
 
-.smallCard:hover img {
-  transform: scale(1.05);
+.largeCard:hover .image,
+.smallCard:hover .image {
+  transform: scale(1.08);
 }
 
-/* ---------- OVERLAY ---------- */
+/* OVERLAY */
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.72),
-    rgba(0, 0, 0, 0.15)
+    rgba(0, 0, 0, 0.82),
+    rgba(0, 0, 0, 0.18)
   );
+
+  z-index: 1;
 }
 
-/* ---------- CONTENT ---------- */
+/* GLOW */
+
+.glow {
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  background: rgba(255,255,255,0.08);
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  top: -80px;
+  right: -40px;
+
+  z-index: 1;
+}
+
+/* LARGE CONTENT */
 
 .content {
   position: absolute;
 
-  bottom: 35px;
-  left: 35px;
+  left: 38px;
+  bottom: 38px;
 
   z-index: 2;
+
+  max-width: 420px;
 }
 
 .content p {
-  color: rgba(255, 255, 255, 0.82);
-
-  font-size: 12px;
+  color: rgba(255,255,255,0.82);
 
   letter-spacing: 2px;
 
-  margin-bottom: 12px;
+  font-size: 11px;
+
+  margin-bottom: 14px;
 }
 
 .content h3 {
   color: white;
 
-  font-size: 46px;
+  font-size: 52px;
 
-  line-height: 1.1;
+  line-height: 1.05;
 
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   font-weight: 700;
 }
 
-.content button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.content span {
+  color: rgba(255,255,255,0.74);
 
-  background: rgba(255, 255, 255, 0.14);
+  font-size: 15px;
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  color: white;
-
-  padding: 12px 18px;
-
-  border-radius: 999px;
-
-  font-size: 13px;
-
-  cursor: pointer;
-
-  backdrop-filter: blur(10px);
-
-  transition: 0.3s ease;
+  line-height: 1.8;
 }
 
-.content button span {
-  transition: 0.3s ease;
-}
-
-.largeCard:hover .content button span {
-  transform: translateX(4px);
-}
-
-/* ---------- SMALL CONTENT ---------- */
+/* SMALL CONTENT */
 
 .smallContent {
   position: absolute;
 
-  bottom: 25px;
-  left: 25px;
+  left: 28px;
+  bottom: 28px;
 
   z-index: 2;
+
+  max-width: 320px;
 }
 
 .smallContent p {
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 11px;
+  color: rgba(255,255,255,0.78);
 
   letter-spacing: 2px;
+
+  font-size: 10px;
 
   margin-bottom: 10px;
 }
@@ -220,12 +222,46 @@
 .smallContent h4 {
   color: white;
 
-  font-size: 28px;
+  font-size: 30px;
+
+  margin-bottom: 10px;
 
   font-weight: 700;
 }
 
-/* ---------- RESPONSIVE ---------- */
+.smallContent span {
+  color: rgba(255,255,255,0.72);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* PREMIUM HOVER */
+
+.largeCard::after,
+.smallCard::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 34px;
+
+  z-index: 2;
+
+  transition: 0.4s ease;
+}
+
+.largeCard:hover::after,
+.smallCard:hover::after {
+  border-color: rgba(255,255,255,0.22);
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 992px) {
   .grid {
@@ -233,7 +269,7 @@
   }
 
   .largeCard {
-    height: 420px;
+    height: 460px;
   }
 
   .smallCard {
@@ -241,37 +277,66 @@
   }
 
   .content h3 {
-    font-size: 34px;
+    font-size: 38px;
+  }
+
+  .smallContent h4 {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 600px) {
   .section {
-    padding: 50px 0;
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 14px;
   }
 
   .heading h2 {
-    font-size: 28px;
+    font-size: 30px;
+  }
+
+  .heading span {
+    font-size: 14px;
   }
 
   .largeCard {
-    height: 340px;
+    height: 360px;
+
+    border-radius: 26px;
   }
 
   .smallCard {
     height: 220px;
+
+    border-radius: 26px;
   }
 
   .content {
+    left: 22px;
+    bottom: 22px;
+  }
+
+  .content h3 {
+    font-size: 30px;
+  }
+
+  .content span {
+    font-size: 13px;
+  }
+
+  .smallContent {
     left: 20px;
     bottom: 20px;
   }
 
-  .content h3 {
-    font-size: 28px;
-  }
-
   .smallContent h4 {
     font-size: 22px;
+  }
+
+  .smallContent span {
+    font-size: 12px;
   }
 }

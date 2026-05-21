@@ -19,96 +19,103 @@ interface BrandItem {
 const brandData: BrandItem[] = [
   {
     id: 1,
-
     name: "RAY-BAN",
-
     tag: "ICONIC STYLES",
-
     link: "/brands",
   },
 
   {
     id: 2,
-
-    name: "OAKLEY",
-
-    tag: "SPORTS PERFORMANCE",
-
+    name: "VOGUE",
+    tag: "FASHION EYEWEAR",
     link: "/brands",
   },
 
   {
     id: 3,
-
-    name: "GUCCI",
-
-    tag: "HIGH FASHION",
-
+    name: "CARRERA",
+    tag: "SPORTS LUXURY",
     link: "/brands",
   },
 
   {
     id: 4,
-
-    name: "DIOR",
-
-    tag: "LUXURY EYEWEAR",
-
+    name: "GUY LAROCHE",
+    tag: "PARIS ELEGANCE",
     link: "/brands",
   },
 
   {
     id: 5,
-
-    name: "PRADA",
-
-    tag: "MODERN ELEGANCE",
-
+    name: "BEBE",
+    tag: "MODERN GLAMOUR",
     link: "/brands",
   },
 
   {
     id: 6,
+    name: "NAUTICA",
+    tag: "TIMELESS STYLE",
+    link: "/brands",
+  },
 
-    name: "VERSACE",
+  {
+    id: 7,
+    name: "ONE DEGREE",
+    tag: "MINIMAL DESIGN",
+    link: "/brands",
+  },
 
-    tag: "HIGH STYLE",
+  {
+    id: 8,
+    name: "LACOSTE",
+    tag: "PREMIUM FASHION",
+    link: "/brands",
+  },
 
+  {
+    id: 9,
+    name: "CALVIN KLEIN",
+    tag: "MODERN LUXURY",
     link: "/brands",
   },
 ];
 
 const Brands: React.FC = () => {
 
-  // Infinite scroll
   const infiniteBrands = [
     ...brandData,
     ...brandData,
   ];
 
   return (
-    <section id="Brands" className={styles.brandsSection}>
+    <section
+      id="Brands"
+      className={styles.brandsSection}
+    >
+      {/* HEADER */}
 
       <div className={styles.header}>
+        <p className={styles.subtitle}>
+          PREMIUM COLLECTION
+        </p>
 
         <h2 className={styles.mainTitle}>
-          EXPLORE OUR LUXURY BRANDS
+          LUXURY BRANDS
         </h2>
-
       </div>
 
+      {/* MARQUEE */}
+
       <div className={styles.marqueeContainer}>
-
         <div className={styles.marqueeContent}>
-
           {infiniteBrands.map(
             (brand, index) => (
-
-              <div
+              <Link
+                href={brand.link}
                 key={`${brand.id}-${index}`}
                 className={styles.brandCard}
               >
-
                 <span className={styles.tag}>
                   {brand.tag}
                 </span>
@@ -116,9 +123,9 @@ const Brands: React.FC = () => {
                 <h3 className={styles.brandName}>
                   {brand.name}
                 </h3>
-
-              </div>
-            ))}
+              </Link>
+            )
+          )}
         </div>
       </div>
     </section>

@@ -12,10 +12,10 @@ import Testimonials from "@/components/home/Testimonials";
 import styles from "./ContactLensesPage.module.css";
 
 const gallery = [
-  "/contact_lens_macro.png",
-  "/contact_lens_hand.png",
-  "/contact_lens_lifestyle.png",
-  "/contact_lens_clean_flatlay.png",
+  "/contact_lens_hand_1200x900.png",
+  "/flat_lay_1200x900.png",
+  "/lifestyle_portrait_woman.png",
+  "/premium_flat_lay_1200x900.png",
 ];
 
 export default function ContactLensesPage() {
@@ -27,7 +27,7 @@ export default function ContactLensesPage() {
         <div className={styles.overlay} />
 
         <Image
-          src="/contact_lens_hero_banner.png"
+          src="/premium_contact_lens_1400x1800.png"
           alt="Premium Contact Lenses"
           fill
           priority
@@ -155,7 +155,7 @@ export default function ContactLensesPage() {
           <div className={styles.experienceGrid}>
             <div className={styles.experienceImage}>
               <Image
-                src="/contact_lens_store.png"
+                src="/showroom_1600x2000.png"
                 alt="Premium Contact Lens"
                 fill
                 className={styles.expImage}

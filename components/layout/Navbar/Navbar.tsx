@@ -126,6 +126,15 @@ export default function Navbar() {
         >
           Our Journey
         </a>
+       <a
+  href="https://www.instagram.com/shreeramopticalssirsa?igsh=MW9oNjZ2cTVvOWczZQ=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className={styles.instagramMobile}
+  onClick={() => setOpen(false)}
+>
+  Instagram
+</a>
       </div>
     </header>
   );

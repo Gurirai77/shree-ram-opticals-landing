@@ -29,7 +29,7 @@ const slides = [
     desktopImage:
       "/ultra_premium_banner_1.png",
     mobileImage:
-      "/ultra_premium_banner_2.jpg",
+      "/ultra_premium_banner_2 (1).png",
     link:
       "/product/rayban-black-frame",
   },
@@ -37,7 +37,7 @@ const slides = [
   {
     id: 3,
     desktopImage:
-      "/hero_banner_final_2.png",
+      "/hero_banner_2026_3 (2).png",
     mobileImage:
       "/ultra_premium_banner_3.png",
     link: "/products",

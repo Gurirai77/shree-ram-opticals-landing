@@ -1,111 +1,300 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
 
 .brandsSection {
-  padding: 60px 0;
-  background: #ffffff;
-  overflow: hidden; /* Bahar ka content chhupane ke liye */
-  border-bottom: 1px solid #f0f0f0;
+  padding: 90px 0;
+
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f8f6f2
+  );
+
+  overflow: hidden;
+
+  position: relative;
 }
+
+/* HEADER */
 
 .header {
   text-align: center;
-  margin-bottom: 40px;
+
+  margin-bottom: 55px;
+
+  padding: 0 20px;
+}
+
+.subtitle {
+  color: #c8a96b;
+
+  letter-spacing: 3px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+
+  text-transform: uppercase;
+
+  font-family: 'Inter', sans-serif;
 }
 
 .mainTitle {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  letter-spacing: 2px;
+
+  font-size: 44px;
+
+  line-height: 1.15;
+
   color: #111;
-  text-transform: uppercase;
+
+  letter-spacing: 1px;
 }
 
-/* Container for the scrolling effect */
+/* MARQUEE */
+
 .marqueeContainer {
-  display: flex;
   width: 100%;
+
   overflow: hidden;
+
   position: relative;
 }
 
-/* Gradient overlays for smooth fade effect at edges */
+/* PREMIUM EDGE FADE */
+
 .marqueeContainer::before,
 .marqueeContainer::after {
   content: "";
+
   position: absolute;
+
   top: 0;
-  width: 150px;
+
+  width: 180px;
+
   height: 100%;
-  z-index: 2;
+
+  z-index: 3;
+
+  pointer-events: none;
 }
 
 .marqueeContainer::before {
   left: 0;
-  background: linear-gradient(to right, white, transparent);
+
+  background: linear-gradient(
+    to right,
+    #f8f6f2,
+    transparent
+  );
 }
 
 .marqueeContainer::after {
   right: 0;
-  background: linear-gradient(to left, white, transparent);
+
+  background: linear-gradient(
+    to left,
+    #f8f6f2,
+    transparent
+  );
 }
+
+/* TRACK */
 
 .marqueeContent {
   display: flex;
-  gap: 40px;
-  animation: scroll 30s linear infinite; /* Animation speed control */
+
+  align-items: center;
+
+  gap: 24px;
+
+  width: max-content;
+
+  animation: luxuryScroll 32s linear infinite;
 }
 
-/* Brand Card Styling */
+/* CARD */
+
 .brandCard {
-  flex: 0 0 280px; /* Card ki fixed width */
-  background: #fcfcfc;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 40px 20px;
+  width: 300px;
+
+  min-width: 300px;
+
+  height: 180px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.82);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(0,0,0,0.05);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.04),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+
+  padding: 28px;
+
   display: flex;
+
   flex-direction: column;
-  align-items: center;
+
   justify-content: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.45s ease;
+
+  text-decoration: none;
 }
+
+/* PREMIUM GLOW */
+
+.brandCard::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  background: rgba(200,169,107,0.12);
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  top: -100px;
+  right: -60px;
+
+  transition: 0.5s ease;
+}
+
+.brandCard:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(200,169,107,0.25);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08),
+    0 0 40px rgba(200,169,107,0.08);
+}
+
+.brandCard:hover::before {
+  transform: scale(1.15);
+}
+
+/* TAG */
 
 .tag {
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
+
+  font-size: 9px;
+
   letter-spacing: 3px;
+
   color: #999;
-  margin-bottom: 12px;
-  font-weight: 500;
+
+  margin-bottom: 14px;
+
+  text-transform: uppercase;
+
+  position: relative;
+
+  z-index: 2;
 }
 
-/* Luxury Gold Color - Constant */
+/* BRAND NAME */
+
 .brandName {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  letter-spacing: 4px;
+
+  font-size: 34px;
+
+  line-height: 1.1;
+
+  letter-spacing: 1px;
+
   margin: 0;
-  
-  /* Luxury Gold Gradient */
-  background: linear-gradient(135deg, #c5a059 0%, #f1d38e 50%, #c5a059 100%);
+
+  position: relative;
+
+  z-index: 2;
+
+  background: linear-gradient(
+    135deg,
+    #c5a059 0%,
+    #f1d38e 50%,
+    #b78b3f 100%
+  );
+
   -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.05));
 }
 
-/* The Animation */
-@keyframes scroll {
+/* ANIMATION */
+
+@keyframes luxuryScroll {
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(calc(-280px * 6 - 40px * 6)); /* Card width + gap */
+    transform: translateX(calc(-324px * 9));
   }
 }
 
-/* Pause animation on hover (optional) */
+/* PAUSE ON HOVER */
+
 .marqueeContainer:hover .marqueeContent {
   animation-play-state: paused;
 }
 
+/* MOBILE */
+
 @media (max-width: 768px) {
-  .brandCard { flex: 0 0 220px; padding: 30px 15px; }
-  .brandName { font-size: 24px; }
+  .brandsSection {
+    padding: 70px 0;
+  }
+
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .brandCard {
+    width: 240px;
+
+    min-width: 240px;
+
+    height: 160px;
+
+    padding: 22px;
+
+    border-radius: 24px;
+  }
+
+  .brandName {
+    font-size: 24px;
+  }
+
+  .marqueeContainer::before,
+  .marqueeContainer::after {
+    width: 70px;
+  }
+
+  @keyframes luxuryScroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-264px * 9));
+    }
+  }
 }

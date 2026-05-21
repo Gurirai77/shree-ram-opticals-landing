@@ -7,6 +7,7 @@ import {
     MapPin,
     ArrowUp,
 } from "lucide-react";
+import { useState } from "react";
 
 import {
     FaInstagram,
@@ -14,7 +15,31 @@ import {
     FaYoutube,
 } from "react-icons/fa";
 
+
 export default function Footer() {
+
+    const [email, setEmail] = useState("");
+
+    const handleWhatsApp = () => {
+
+        const phoneNumber = "919729267890";
+
+        const message =
+            `Hello Shree Ram Opticals,
+
+I would like to stay updated with your premium eyewear collections, luxury launches, and exclusive offers.
+
+My Email: ${email}`;
+
+        const whatsappUrl =
+            `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        window.open(
+            whatsappUrl,
+            "_blank"
+        );
+    };
+
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
@@ -42,9 +67,13 @@ export default function Footer() {
                             <input
                                 type="email"
                                 placeholder="Enter your email address"
+                                value={email}
+                                onChange={(e) =>
+                                    setEmail(e.target.value)
+                                }
                             />
 
-                            <button>
+                            <button onClick={handleWhatsApp}>
                                 SUBSCRIBE →
                             </button>
                         </div>
@@ -87,16 +116,15 @@ export default function Footer() {
                         </p>
 
                         <div className={styles.socials}>
-                            <a href="#">
-                                <FaInstagram size={18} />
-                            </a>
+                            <a
+                                href="https://www.instagram.com/shreeramopticalssirsa?igsh=MW9oNjZ2cTVvOWczZQ=="
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.instagram}
+                            >
+                                <FaInstagram size={20} />
 
-                            <a href="#">
-                                <FaFacebookF size={18} />
-                            </a>
-
-                            <a href="#">
-                                <FaYoutube size={18} />
+                                <span>Instagram</span>
                             </a>
                         </div>
                     </div>
@@ -105,69 +133,144 @@ export default function Footer() {
                     <div className={styles.links}>
                         <h4>QUICK LINKS</h4>
 
-                        <a href="#Home">
-            Home
-          </a>
+                        <a href="/#Home">
+                            Home
+                        </a>
 
-          <a href="#COLLECTION">
-            Collection
-          </a>
+                        <a href="/#COLLECTION">
+                            Collection
+                        </a>
 
-          <a href="#WhyChooseUs">
-            Why Choose Us
-          </a>
+                        <a href="/#WhyChooseUs">
+                            Why Choose Us
+                        </a>
 
-          <a href="#CustomerReviews">
-            Customer Reviews
-          </a>
+                        <a href="/#CustomerReviews">
+                            Customer Reviews
+                        </a>
 
-          <a href="#Brands">Brands</a>
+                        <a href="/#Brands">Brands</a>
 
-          <a
-            href="/#OurJourney"
-            className={styles.offerLink}
-          >
-            Our Journey
-          </a>
-          <a
-            href="/blogs"
-            className={styles.offerLink}
-          >
-            Blogs
-          </a>
+                        <a
+                            href="/#OurJourney"
+                            className={styles.offerLink}
+                        >
+                            Our Journey
+                        </a>
+                        <a href="/shree-ram-opticals-sirsa">
+                            Shree Ram Opticals Sirsa
+                        </a>
+                        <a href="/best-optical-shop-in-sirsa">
+                            Best Optical Shop in Sirsa
+                        </a>
                     </div>
 
-                    {/* Support */}
-                    <div className={styles.links}>
-                        <h4>CUSTOMER SUPPORT</h4>
+                    <div className={styles.faqSection}>
+                        <h4>POPULAR QUESTIONS</h4>
 
-                        {/* <a href="#">Contact</a> */}
-                        {/* <a href="#">Shipping Policy</a> */}
-                        <a href="#">Return Policy</a>
-                        <a href="#">FAQs</a>
-                        {/* <a href="#">Privacy Policy</a> */}
+                        <div className={styles.faqItem}>
+                            <h5>
+                                Which is the best optical shop in Sirsa?
+                            </h5>
+
+                            <p>
+                                Shree Ram Opticals offers premium eyewear,
+                                luxury sunglasses, contact lenses and
+                                professional eye care solutions in Sirsa.
+                            </p>
+                        </div>
+
+                        <div className={styles.faqItem}>
+                            <h5>
+                                Do you offer premium sunglasses in Sirsa?
+                            </h5>
+
+                            <p>
+                                Yes, we provide stylish premium sunglasses
+                                collections inspired by modern international
+                                luxury eyewear trends.
+                            </p>
+                        </div>
+
+                        <div className={styles.faqItem}>
+                            <h5>
+                                Do you provide contact lenses?
+                            </h5>
+
+                            <p>
+                                We offer comfortable daily wear and premium
+                                contact lens solutions for clear vision and
+                                all-day comfort.
+                            </p>
+                        </div>
+
+                        <div className={styles.faqItem}>
+                            <h5>
+                                Where is Shree Ram Opticals located?
+                            </h5>
+
+                            <p>
+                                Our premium optical showroom is located in
+                                Sirsa, Haryana, India.
+                            </p>
+                        </div>
                     </div>
 
                     {/* Contact */}
                     <div className={styles.contact}>
                         <h4>CONTACT US</h4>
 
-                        <div>
+                        {/* PHONE */}
+
+                        <a
+                            href="tel:+919729267890"
+                            className={styles.contactItem}
+                        >
                             <Phone size={18} />
-                            <span>+91 98765 43210</span>
-                        </div>
 
-                        <div>
-                            <Mail size={18} />
-                            <span>info@shreeramopticals.com</span>
-                        </div>
-
-                        <div>
-                            <MapPin size={18} />
                             <span>
-                                Sirsa, Haryana,
-                                India
+                                +91 97292 67890
                             </span>
+                        </a>
+
+                        {/* EMAIL */}
+
+                        <a
+                            href="mailto:opticalsshreeram@gmail.com"
+                            className={styles.contactItem}
+                        >
+                            <Mail size={18} />
+
+                            <span>
+                                opticalsshreeram@gmail.com
+                            </span>
+                        </a>
+
+                        {/* LOCATION */}
+
+                        <a
+                            href="https://maps.app.goo.gl/JEzBJE9TKyXvWFG17"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.contactItem}
+                        >
+                            <MapPin size={18} />
+
+                            <span>
+                                Sirsa, Haryana, India
+                            </span>
+                        </a>
+
+                        {/* GOOGLE MAP */}
+
+                        <div className={styles.mapWrapper}>
+                            <iframe
+                                src="https://www.google.com/maps?q=Shree+Ram+Opticals+Sirsa&output=embed"
+                                loading="lazy"
+                                allowFullScreen
+                                referrerPolicy="no-referrer-when-downgrade"
+                                className={styles.map}
+                            />
                         </div>
                     </div>
                 </div>

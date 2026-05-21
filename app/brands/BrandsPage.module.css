@@ -1,0 +1,357 @@
+/* app/brands/BrandsPage.module.css */
+
+.page {
+  background: #0f0f0f;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+
+  height: 78vh;
+
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.82),
+    rgba(0, 0, 0, 0.25)
+  );
+
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1350px;
+
+  margin: auto;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 0 20px;
+}
+
+.heroContent p {
+  color: #d4af37;
+
+  letter-spacing: 3px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.heroContent h1 {
+  color: white;
+
+  font-size: 74px;
+
+  line-height: 1.05;
+
+  margin-bottom: 24px;
+
+  font-weight: 700;
+}
+
+.heroContent span {
+  color: rgba(255,255,255,0.78);
+
+  max-width: 650px;
+
+  line-height: 1.9;
+
+  font-size: 17px;
+}
+
+/* BRANDS */
+
+.brandsSection {
+  padding: 100px 0;
+}
+
+.container {
+  max-width: 1350px;
+
+  margin: auto;
+
+  padding: 0 20px;
+}
+
+.heading {
+  text-align: center;
+
+  margin-bottom: 55px;
+}
+
+.heading p {
+  color: #d4af37;
+
+  letter-spacing: 3px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+.heading h2 {
+  color: white;
+
+  font-size: 44px;
+
+  margin-bottom: 14px;
+}
+
+.heading span {
+  color: rgba(255,255,255,0.7);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+/* CARD */
+
+.card {
+  background: #171717;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(255,255,255,0.16);
+}
+
+.imageWrapper {
+  position: relative;
+
+  height: 320px;
+
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+
+  transition: 0.7s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+.cardOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0)
+  );
+}
+
+/* CONTENT */
+
+.cardContent {
+  padding: 28px;
+}
+
+.cardContent h3 {
+  color: white;
+
+  font-size: 28px;
+
+  margin-bottom: 12px;
+}
+
+.cardContent p {
+  color: rgba(255,255,255,0.68);
+
+  line-height: 1.8;
+
+  font-size: 14px;
+}
+
+/* EXPERIENCE */
+
+.experience {
+  padding: 40px 0 120px;
+}
+
+.expBox {
+  background: linear-gradient(
+    135deg,
+    #1c1c1c,
+    #101010
+  );
+
+  border-radius: 34px;
+
+  padding: 80px 50px;
+
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.expBox p {
+  color: #d4af37;
+
+  letter-spacing: 3px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.expBox h2 {
+  color: white;
+
+  font-size: 52px;
+
+  line-height: 1.15;
+
+  margin-bottom: 24px;
+}
+
+.expBox span {
+  display: block;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  color: rgba(255,255,255,0.72);
+
+  line-height: 1.9;
+
+  margin-bottom: 34px;
+}
+
+.visitBtn {
+  display: inline-block;
+
+  background: #d4af37;
+
+  color: #111;
+
+  padding: 15px 32px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.visitBtn:hover {
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroContent h1 {
+    font-size: 54px;
+  }
+
+  .expBox h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .heroContent h1 {
+    font-size: 36px;
+  }
+
+  .heroContent span {
+    font-size: 14px;
+  }
+
+  .brandsSection {
+    padding: 70px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading h2 {
+    font-size: 30px;
+  }
+
+  .imageWrapper {
+    height: 260px;
+  }
+
+  .cardContent h3 {
+    font-size: 24px;
+  }
+
+  .expBox {
+    padding: 50px 25px;
+  }
+
+  .expBox h2 {
+    font-size: 30px;
+  }
+}

@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer/Footer";
 
 
 import Topbar from "@/components/layout/Topbar/Topbar";
+import WhatsAppButton from "@/components/common/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
         
           <Topbar />
           <Navbar />
+          <WhatsAppButton />
 
           {children}
 

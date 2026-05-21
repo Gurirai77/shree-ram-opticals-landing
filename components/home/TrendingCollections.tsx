@@ -1,119 +1,69 @@
-import Image from "next/image";
+// components/home/TrendingCollections.tsx
 
-import Link from "next/link";
+import Image from "next/image";
 
 import styles from "./TrendingCollections.module.css";
 
 export default function TrendingCollections() {
-
   return (
     <section className={styles.section}>
-
       <div className={styles.container}>
+        {/* HEADING */}
 
-        {/* Heading */}
         <div className={styles.heading}>
+          <p>TRENDING COLLECTIONS</p>
 
-          <p>
-            TRENDING COLLECTIONS
-          </p>
-
-          <h2>
-            Luxury Styles For Every Look
-          </h2>
+          <h2>Luxury Styles For Every Look</h2>
 
           <span>
-            Discover premium eyewear
-            crafted for modern fashion.
+            Discover premium eyewear collections inspired
+            by modern fashion and timeless elegance.
           </span>
-
         </div>
 
-        {/* Layout */}
+        {/* GRID */}
+
         <div className={styles.grid}>
+          {/* LARGE CARD */}
 
-          {/* Left Large Banner */}
-          <Link
-            href="https://maps.app.goo.gl/JEzBJE9TKyXvWFG17"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.largeCard}
-          >
-
+          <div className={styles.largeCard}>
             <Image
               src="/luxury_vision_modern.webp"
               alt="Luxury Eyewear"
               fill
+              priority
               className={styles.image}
             />
 
             <div className={styles.overlay} />
 
-            <div className={styles.content}>
+            <div className={styles.glow} />
 
-              <p>
-                LUXURY VISION
-              </p>
+            <div className={styles.content}>
+              <p>PREMIUM EYEGLASSES</p>
 
               <h3>
                 Crafted For
                 <br />
-                Modern Style
+                Modern Elegance
               </h3>
 
-              <button>
-                Explore Collection
-
-                <span>→</span>
-              </button>
-
+              <span>
+                Explore lightweight luxury frames designed
+                for comfort, clarity, and timeless style.
+              </span>
             </div>
-          </Link>
+          </div>
 
-          {/* Right Side */}
+          {/* RIGHT SIDE */}
+
           <div className={styles.rightSide}>
+            {/* SUNGLASSES */}
 
-            {/* Card 1 */}
-            <Link
-              href="https://maps.app.goo.gl/JEzBJE9TKyXvWFG17"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.smallCard}
-            >
-
-              <Image
-                src="/minimal_frames_elegance.webp"
-                alt="Frames"
-                fill
-                className={styles.image}
-              />
-
-              <div className={styles.overlay} />
-
-              <div className={styles.smallContent}>
-
-                <p>
-                  MINIMAL FRAMES
-                </p>
-
-                <h4>
-                  Timeless Elegance
-                </h4>
-
-              </div>
-            </Link>
-
-            {/* Card 2 */}
-            <Link
-              href="https://maps.app.goo.gl/JEzBJE9TKyXvWFG17"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.smallCard}
-            >
-
+            <div className={styles.smallCard}>
               <Image
                 src="/premium_sunglasses_bold.webp"
-                alt="Sunglasses"
+                alt="Luxury Sunglasses"
                 fill
                 className={styles.image}
               />
@@ -121,17 +71,40 @@ export default function TrendingCollections() {
               <div className={styles.overlay} />
 
               <div className={styles.smallContent}>
+                <p>LUXURY SUNGLASSES</p>
 
-                <p>
-                  PREMIUM SUNGLASSES
-                </p>
+                <h4>Bold Summer Luxury</h4>
 
-                <h4>
-                  Bold Luxury Looks
-                </h4>
-
+                <span>
+                  Premium sunglasses crafted for iconic
+                  fashion and UV protection.
+                </span>
               </div>
-            </Link>
+            </div>
+
+            {/* CONTACT LENS */}
+
+            <div className={styles.smallCard}>
+              <Image
+                src="/minimal_frames_elegance.webp"
+                alt="Contact Lens"
+                fill
+                className={styles.image}
+              />
+
+              <div className={styles.overlay} />
+
+              <div className={styles.smallContent}>
+                <p>CONTACT LENS CARE</p>
+
+                <h4>Comfort Vision Everyday</h4>
+
+                <span>
+                  Advanced lens solutions designed for
+                  hydration and crystal clear vision.
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
