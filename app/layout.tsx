@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       "Premium eyewear and luxury optical collections in Sirsa.",
 
     images: [
-      "/revis.jpeg",
+      "/shree_ram_opticals_banner_1_resized.png",
     ],
   },
 };
