@@ -1,17 +1,23 @@
 /* ---------- SECTION ---------- */
 
 .section {
-  padding: 60px 0;
+  padding: 90px 0;
 
-  background: #f7f3ed;
+  background: linear-gradient(
+    to bottom,
+    #f8f5ef,
+    #f2ece3
+  );
+
+  overflow: hidden;
 }
 
 .container {
-  max-width: 1350px;
+  max-width: 1320px;
 
   margin: auto;
 
-  padding: 0 20px;
+  padding: 0 22px;
 }
 
 /* ---------- HEADING ---------- */
@@ -19,32 +25,43 @@
 .heading {
   text-align: center;
 
-  margin-bottom: 40px;
+  margin-bottom: 55px;
 }
 
 .heading p {
-  color: #c8a96b;
+  color: #b89352;
 
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 
   font-size: 11px;
+
   font-weight: 700;
 
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .heading h2 {
-  font-size: 38px;
+  font-size: 48px;
+
+  line-height: 1.1;
 
   color: #111;
 
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 
   font-weight: 700;
 }
 
 .heading span {
-  font-size: 15px;
+  display: block;
+
+  max-width: 640px;
+
+  margin: auto;
+
+  font-size: 16px;
+
+  line-height: 1.8;
 
   color: #666;
 }
@@ -54,9 +71,9 @@
 .grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.2fr 1fr;
 
-  gap: 18px;
+  gap: 22px;
 }
 
 /* ---------- CARD ---------- */
@@ -64,104 +81,149 @@
 .card {
   position: relative;
 
-  height: 240px;
+  height: 290px;
 
-  border-radius: 22px;
+  border-radius: 30px;
 
   overflow: hidden;
 
   cursor: pointer;
 
-  transition: 0.4s ease;
+  isolation: isolate;
+
+  background: #000;
+
+  transition: all 0.45s ease;
 }
 
 .largeCard {
-  height: 300px;
+  height: 420px;
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
+.card:hover {
+  transform: translateY(-6px);
+}
 
+.image {
   object-fit: cover;
 
-  transition: 0.6s ease;
+  object-position: center;
+
+  transition: transform 0.7s ease;
 }
 
-.card:hover img {
-  transform: scale(1.06);
+.card:hover .image {
+  transform: scale(1.08);
 }
+
+/* ---------- OVERLAY ---------- */
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.72),
-    rgba(0, 0, 0, 0.15)
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.18),
+    rgba(0, 0, 0, 0.02)
   );
+
+  z-index: 1;
 }
+
+.glow {
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 215, 120, 0.28),
+    transparent 45%
+  );
+
+  z-index: 1;
+}
+
+/* ---------- CONTENT ---------- */
 
 .content {
   position: absolute;
 
-  bottom: 20px;
-  left: 20px;
+  bottom: 28px;
+  left: 28px;
 
   z-index: 2;
 }
 
 .content p {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.75);
 
   font-size: 11px;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
 
-  margin-bottom: 8px;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
 }
 
 .content h3 {
-  color: white;
+  color: #fff;
 
-  font-size: 28px;
+  font-size: 34px;
 
-  margin-bottom: 14px;
+  line-height: 1.1;
+
+  margin-bottom: 18px;
 
   font-weight: 700;
 }
 
 .content button {
   display: flex;
+
   align-items: center;
-  gap: 8px;
+
+  gap: 10px;
 
   background: rgba(255, 255, 255, 0.12);
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   color: white;
 
-  padding: 10px 16px;
+  padding: 12px 18px;
 
   border-radius: 999px;
 
   font-size: 12px;
 
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
   cursor: pointer;
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 
-  transition: 0.3s ease;
+  transition: all 0.35s ease;
 }
 
 .content button span {
-  transition: 0.3s ease;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .content button {
+  background: #c8a96b;
+
+  color: #111;
 }
 
 .card:hover .content button span {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 /* ---------- BADGE ---------- */
@@ -169,30 +231,37 @@
 .badge {
   position: absolute;
 
-  top: 14px;
-  right: 14px;
+  top: 20px;
+  right: 20px;
 
-  background: #c8a96b;
+  z-index: 3;
+
+  background: rgba(255, 215, 140, 0.95);
 
   color: #111;
 
-  padding: 8px 12px;
+  padding: 10px 14px;
 
   border-radius: 999px;
 
-  font-size: 9px;
+  font-size: 10px;
+
   font-weight: 700;
 
   letter-spacing: 1.5px;
 
-  z-index: 3;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 992px) {
+  .section {
+    padding: 70px 0;
+  }
+
   .heading h2 {
-    font-size: 32px;
+    font-size: 38px;
   }
 
   .grid {
@@ -201,46 +270,65 @@
 
   .largeCard,
   .card {
-    height: 260px;
+    height: 300px;
   }
 }
 
 @media (max-width: 600px) {
   .section {
-    padding: 40px 0;
+    padding: 55px 0;
   }
 
   .container {
     padding: 0 14px;
   }
 
+  .heading {
+    margin-bottom: 35px;
+  }
+
+  .heading p {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
   .heading h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .heading span {
     font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .largeCard,
+  .card {
+    height: 240px;
+  }
+
+  .content {
+    left: 20px;
+    bottom: 20px;
   }
 
   .content h3 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .content button {
-    padding: 8px 14px;
+    padding: 9px 14px;
 
     font-size: 11px;
   }
-}
 
-.card {
-  position: relative;
+  .badge {
+    top: 14px;
+    right: 14px;
 
-  overflow: hidden;
-}
+    font-size: 9px;
 
-.image {
-  object-fit: cover;
-
-  object-position: center;
+    padding: 8px 12px;
+  }
 }

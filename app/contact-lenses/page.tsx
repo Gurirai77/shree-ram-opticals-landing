@@ -1,4 +1,4 @@
-// app/eyeglasses/page.tsx
+// app/contact-lenses/page.tsx
 
 import Image from "next/image";
 import Link from "next/link";
@@ -9,43 +9,43 @@ import Brands from "@/components/home/Brands";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Testimonials from "@/components/home/Testimonials";
 
-import styles from "./EyeglassesPage.module.css";
+import styles from "./ContactLensesPage.module.css";
 
 const gallery = [
-  "/black_titanium_eyeglasses.png",
-  "/eyewear_closeup_final.png",
-  "/eyewear_model_1_final.png",
-  "/eyewear_flatlay_final.png",
+  "/contact_lens_macro.png",
+  "/contact_lens_hand.png",
+  "/contact_lens_lifestyle.png",
+  "/contact_lens_clean_flatlay.png",
 ];
 
-export default function EyeglassesPage() {
+export default function ContactLensesPage() {
   return (
     <main className={styles.page}>
-      {/* TOP HERO */}
+      {/* HERO */}
 
       <section className={styles.hero}>
         <div className={styles.overlay} />
 
         <Image
-          src="/eyewear_model_2_final.png"
-          alt="Luxury Eyeglasses"
+          src="/contact_lens_hero_banner.png"
+          alt="Premium Contact Lenses"
           fill
           priority
           className={styles.heroImage}
         />
 
         <div className={styles.heroContent}>
-          <p>PREMIUM EYEWEAR COLLECTION</p>
+          <p>PREMIUM CONTACT LENS COLLECTION</p>
 
           <h1>
-            Elevate Your Vision
+            Clear Vision
             <br />
-            With Luxury Frames
+            Everyday Comfort
           </h1>
 
           <span>
-            Discover handcrafted eyeglasses designed for elegance,
-            comfort, and modern lifestyles.
+            Experience premium contact lenses designed for
+            comfort, clarity, and effortless everyday wear.
           </span>
 
           <div className={styles.heroButtons}>
@@ -57,43 +57,46 @@ export default function EyeglassesPage() {
               Visit Our Store
             </Link>
 
-            <a href="#collection" className={styles.secondaryBtn}>
+            <a
+              href="#collection"
+              className={styles.secondaryBtn}
+            >
               Explore Collection
             </a>
           </div>
         </div>
       </section>
 
-      {/* MINI INTRO */}
+      {/* INTRO */}
 
       <section className={styles.intro}>
         <div className={styles.container}>
           <div className={styles.introBox}>
             <div>
               <p className={styles.smallTitle}>
-                DESIGNED FOR MODERN LIFESTYLES
+                MODERN VISION SOLUTIONS
               </p>
 
               <h2>
-                Premium Eyeglasses
+                Premium Contact Lenses
                 <br />
-                Crafted With Elegance
+                Crafted For Comfort
               </h2>
             </div>
 
             <div>
               <span>
-                Explore a curated collection of luxury eyewear
-                featuring premium materials, lightweight comfort,
-                and timeless aesthetics designed for every
-                personality.
+                Explore advanced contact lens collections
+                designed with superior hydration,
+                crystal-clear vision, and long-lasting
+                comfort.
               </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* GALLERY */}
+      {/* COLLECTION */}
 
       <section
         id="collection"
@@ -101,12 +104,13 @@ export default function EyeglassesPage() {
       >
         <div className={styles.container}>
           <div className={styles.heading}>
-            <p>LUXURY COLLECTION</p>
+            <p>PREMIUM VISION CARE</p>
 
-            <h2>Explore Signature Frames</h2>
+            <h2>Explore Modern Lens Solutions</h2>
 
             <span>
-              A premium showcase inspired by luxury optical brands.
+              Clean, comfortable, and designed for everyday
+              confidence.
             </span>
           </div>
 
@@ -115,12 +119,14 @@ export default function EyeglassesPage() {
               <div
                 key={index}
                 className={`${styles.card} ${
-                  index === 0 ? styles.largeCard : ""
+                  index === 0
+                    ? styles.largeCard
+                    : ""
                 }`}
               >
                 <Image
                   src={item}
-                  alt="Eyeglasses"
+                  alt="Contact Lens"
                   fill
                   className={styles.image}
                 />
@@ -130,48 +136,63 @@ export default function EyeglassesPage() {
         </div>
       </section>
 
-      {/* EXISTING PREMIUM COMPONENTS */}
+      {/* COMPONENTS */}
 
-      <Brands />
+      <div className={styles.lightTheme}>
+        <Brands />
 
-      <TrendingCollections />
+        <TrendingCollections />
 
-      <WhyChooseUs />
+        <WhyChooseUs />
 
-      {/* EXPERIENCE SECTION */}
+        <Testimonials />
+      </div>
+
+      {/* EXPERIENCE */}
 
       <section className={styles.experience}>
         <div className={styles.container}>
           <div className={styles.experienceGrid}>
             <div className={styles.experienceImage}>
               <Image
-                src="/eyewear_showroom_final.png"
-                alt="Premium Eyewear"
+                src="/contact_lens_store.png"
+                alt="Premium Contact Lens"
                 fill
                 className={styles.expImage}
               />
             </div>
 
             <div className={styles.experienceContent}>
-              <p>STORE EXPERIENCE</p>
+              <p>PROFESSIONAL EYE CARE</p>
 
               <h2>
-                Experience Premium
+                Experience Clear
                 <br />
-                Eyewear In Person
+                Vision Comfort
               </h2>
 
               <span>
-                Visit our showroom to explore luxury eyewear
-                collections with expert guidance and personalized
-                styling assistance.
+                Visit our store to discover premium contact
+                lens solutions with professional consultation
+                and personalized guidance.
               </span>
 
               <ul>
-                <li>Luxury Imported Frames</li>
-                <li>Latest International Designs</li>
-                <li>Comfort & Lightweight Materials</li>
-                <li>Professional Eye Testing</li>
+                <li>
+                  All-Day Comfort Technology
+                </li>
+
+                <li>
+                  Premium Hydration Support
+                </li>
+
+                <li>
+                  Crystal Clear Vision
+                </li>
+
+                <li>
+                  Expert Eye Consultation
+                </li>
               </ul>
 
               <Link
@@ -186,22 +207,24 @@ export default function EyeglassesPage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* EXTRA SLIDER */}
 
-      <Testimonials />
+      <div className={styles.bottomSlider}>
+        <HeroSlider />
+      </div>
 
-      {/* FINAL CTA */}
+      {/* CTA */}
 
       <section className={styles.cta}>
         <div className={styles.ctaOverlay} />
 
         <div className={styles.ctaContent}>
-          <p>VISIT OUR SHOWROOM</p>
+          <p>VISIT OUR STORE</p>
 
           <h2>
-            Discover Luxury Eyewear
+            Experience Premium
             <br />
-            Crafted For Your Style
+            Contact Lens Care
           </h2>
 
           <Link

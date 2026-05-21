@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import HeroSlider from "@/components/home/HeroSlider";
 import TrendingCollections from "@/components/home/TrendingCollections";
 import Brands from "@/components/home/Brands";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -137,13 +136,17 @@ export default function SunglassesPage() {
         </div>
       </section>
 
-      {/* COMPONENTS */}
+ 
 
-      <Brands />
+<div className={styles.darkTheme}>
+  <Brands />
 
-      <TrendingCollections />
+  <TrendingCollections />
 
-      <WhyChooseUs />
+  <WhyChooseUs />
+
+  <Testimonials />
+</div>
 
       {/* EXPERIENCE */}
 
@@ -204,16 +207,6 @@ export default function SunglassesPage() {
           </div>
         </div>
       </section>
-
-      {/* TESTIMONIALS */}
-
-      <Testimonials />
-
-      {/* EXTRA SLIDER */}
-
-      <div className={styles.bottomSlider}>
-        <HeroSlider />
-      </div>
 
       {/* CTA */}
 

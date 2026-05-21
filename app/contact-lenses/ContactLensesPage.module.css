@@ -1,7 +1,7 @@
-/* app/sunglasses/SunglassesPage.module.css */
+/* app/contact-lenses/ContactLensesPage.module.css */
 
 .page {
-  background: #0f0f0f;
+  background: #f4f8fb;
 }
 
 /* HERO */
@@ -27,8 +27,8 @@
 
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.82),
-    rgba(0, 0, 0, 0.25)
+    rgba(10, 20, 35, 0.68),
+    rgba(10, 20, 35, 0.18)
   );
 
   z-index: 1;
@@ -55,7 +55,7 @@
 }
 
 .heroContent p {
-  color: #d4af37;
+  color: #9db7c9;
 
   letter-spacing: 3px;
 
@@ -69,7 +69,7 @@
 .heroContent h1 {
   color: white;
 
-  font-size: 76px;
+  font-size: 72px;
 
   line-height: 1.05;
 
@@ -79,7 +79,7 @@
 }
 
 .heroContent span {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255,255,255,0.82);
 
   max-width: 650px;
 
@@ -112,7 +112,7 @@
 }
 
 .primaryBtn {
-  background: #d4af37;
+  background: white;
 
   color: #111;
 
@@ -120,7 +120,7 @@
 }
 
 .secondaryBtn {
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255,255,255,0.24);
 
   color: white;
 
@@ -148,9 +148,7 @@
 
   gap: 50px;
 
-  background: #171717;
-
-  border: 1px solid rgba(255,255,255,0.08);
+  background: white;
 
   border-radius: 28px;
 
@@ -158,7 +156,7 @@
 }
 
 .smallTitle {
-  color: #d4af37;
+  color: #9db7c9;
 
   letter-spacing: 3px;
 
@@ -174,11 +172,11 @@
 
   line-height: 1.15;
 
-  color: white;
+  color: #111827;
 }
 
 .introBox span {
-  color: rgba(255,255,255,0.72);
+  color: #5d6a74;
 
   font-size: 16px;
 
@@ -198,7 +196,7 @@
 }
 
 .heading p {
-  color: #d4af37;
+  color: #9db7c9;
 
   letter-spacing: 3px;
 
@@ -212,13 +210,13 @@
 .heading h2 {
   font-size: 44px;
 
-  color: white;
+  color: #111827;
 
   margin-bottom: 14px;
 }
 
 .heading span {
-  color: rgba(255,255,255,0.68);
+  color: #5d6a74;
 
   font-size: 15px;
 }
@@ -254,7 +252,13 @@
 }
 
 .card:hover .image {
-  transform: scale(1.06);
+  transform: scale(1.05);
+}
+
+/* LIGHT THEME */
+
+.lightTheme :global(section) {
+  background: transparent !important;
 }
 
 /* EXPERIENCE */
@@ -288,7 +292,7 @@
 }
 
 .experienceContent p {
-  color: #d4af37;
+  color: #9db7c9;
 
   letter-spacing: 3px;
 
@@ -302,7 +306,7 @@
 .experienceContent h2 {
   font-size: 52px;
 
-  color: white;
+  color: #111827;
 
   line-height: 1.15;
 
@@ -310,7 +314,7 @@
 }
 
 .experienceContent span {
-  color: rgba(255,255,255,0.72);
+  color: #5d6a74;
 
   line-height: 1.9;
 
@@ -328,23 +332,21 @@
 .experienceContent li {
   margin-bottom: 14px;
 
-  color: white;
+  color: #111827;
 }
 
 .visitBtn {
   display: inline-block;
 
-  background: #d4af37;
+  background: #111827;
 
-  color: #111;
+  color: white;
 
   padding: 14px 28px;
 
   border-radius: 999px;
 
   text-decoration: none;
-
-  font-weight: 700;
 }
 
 /* SLIDER */
@@ -360,7 +362,7 @@
 
   padding: 130px 20px;
 
-  background-image: url("/luxury_sunglasses_hero.png");
+  background-image: url("/contact_lens_hero_banner.png");
 
   background-size: cover;
 
@@ -372,7 +374,7 @@
 
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(10,20,35,0.72);
 }
 
 .ctaContent {
@@ -384,7 +386,7 @@
 }
 
 .ctaContent p {
-  color: #d4af37;
+  color: #dce7ef;
 
   letter-spacing: 3px;
 
@@ -408,9 +410,9 @@
 
   padding: 15px 30px;
 
-  background: #d4af37;
+  background: white;
 
-  color: #111;
+  color: #111827;
 
   border-radius: 999px;
 
@@ -489,51 +491,4 @@
   .cta {
     padding: 90px 20px;
   }
-}
-
-
-
-
-/* DARK THEME OVERRIDES */
-
-.darkTheme :global(section) {
-  background: #0f0f0f !important;
-}
-
-.darkTheme :global(h1),
-.darkTheme :global(h2),
-.darkTheme :global(h3),
-.darkTheme :global(h4),
-.darkTheme :global(p),
-.darkTheme :global(span),
-.darkTheme :global(li),
-.darkTheme :global(a) {
-  color: white !important;
-}
-
-/* GOLD ACCENTS */
-
-.darkTheme :global(button),
-.darkTheme :global(.button),
-.darkTheme :global(.primaryBtn) {
-  background: #d4af37 !important;
-
-  color: #111 !important;
-}
-
-/* CARDS */
-
-.darkTheme :global(.card),
-.darkTheme :global(.featureCard),
-.darkTheme :global(.brandCard) {
-  background: #171717 !important;
-
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* SUBTEXT */
-
-.darkTheme :global(.subtitle),
-.darkTheme :global(.description) {
-  color: rgba(255,255,255,0.68) !important;
 }
