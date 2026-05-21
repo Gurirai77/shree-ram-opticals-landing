@@ -18,7 +18,7 @@ const slides = [
   {
     id: 1,
     desktopImage:
-      "/hero_banner_final_1 (1).png",
+      "/hero_banner_final_modified.png",
     mobileImage:
       "/ultra_premium_banner_1.png",
     link: "/products",
