@@ -28,7 +28,7 @@ export default function EyeglassesPage() {
 
         <Image
           src="/eyewear_model_2_final.png"
-          alt="Luxury Eyeglasses"
+          alt="Premium Eyeglasses In Sirsa"
           fill
           priority
           className={styles.heroImage}
@@ -120,7 +120,7 @@ export default function EyeglassesPage() {
               >
                 <Image
                   src={item}
-                  alt="Eyeglasses"
+                  alt="Premium Eyeglasses In Sirsa"
                   fill
                   className={styles.image}
                 />
@@ -146,7 +146,7 @@ export default function EyeglassesPage() {
             <div className={styles.experienceImage}>
               <Image
                 src="/eyewear_showroom_final.png"
-                alt="Premium Eyewear"
+                alt="Premium Eyeglasses In Sirsa"
                 fill
                 className={styles.expImage}
               />
