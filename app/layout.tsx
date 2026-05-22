@@ -36,6 +36,10 @@ export const metadata: Metadata = {
     "Premium Eyewear Sirsa",
   ],
 
+  verification: {
+  google: "sCeKDx4oxVCOn4biAovEf2uLzvEo2mZnyXnX1sqqpPI",
+},
+
   openGraph: {
     title:
       "Shree Ram Opticals Sirsa",
