@@ -11,6 +11,7 @@ import Footer from "@/components/layout/Footer/Footer";
 
 import Topbar from "@/components/layout/Topbar/Topbar";
 import WhatsAppButton from "@/components/common/WhatsAppButton";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,14 +88,29 @@ export default function RootLayout({
           overflow-x-hidden
         "
       >
-        
-          <Topbar />
-          <Navbar />
-          <WhatsAppButton />
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-D1QWVY7REX"
+          strategy="afterInteractive"
+        />
 
-          {children}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-          <Footer />
+    gtag('config', 'G-D1QWVY7REX');
+  `}
+        </Script>
+
+        <Topbar />
+        <Navbar />
+        <WhatsAppButton />
+
+        {children}
+
+        <Footer />
       </body>
     </html>
   );
