@@ -4,10 +4,55 @@ import styles from "./BestOpticalShop.module.css";
 
 export const metadata = {
   title:
-    "Best Optical Shop In Sirsa | Shree Ram Opticals",
+    "Best Optical Shop In Sirsa | Premium Eyewear Store",
 
   description:
-    "Discover premium eyeglasses, sunglasses, contact lenses and luxury eyewear collections at Shree Ram Opticals - the best optical shop in Sirsa.",
+    "Visit Shree Ram Opticals - the best optical shop in Sirsa for premium eyeglasses, luxury sunglasses, contact lenses and professional eye care solutions.",
+
+  keywords: [
+    "Best Optical Shop in Sirsa",
+    "Optical Shop in Sirsa",
+    "Eyeglasses Shop Sirsa",
+    "Luxury Sunglasses Sirsa",
+    "Eye Testing Sirsa",
+    "Premium Eyewear Sirsa",
+    "Contact Lens Shop Sirsa",
+  ],
+
+  alternates: {
+    canonical:
+      "https://www.shreeramopticals.in/best-optical-shop-in-sirsa",
+  },
+
+  openGraph: {
+    title:
+      "Best Optical Shop In Sirsa | Shree Ram Opticals",
+
+    description:
+      "Premium eyewear, luxury sunglasses and modern eye care solutions in Sirsa.",
+
+    url:
+      "https://www.shreeramopticals.in/best-optical-shop-in-sirsa",
+
+    siteName: "Shree Ram Opticals",
+
+    images: [
+      {
+        url: "/shree_ram_opticals_banner_1_resized.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+
+    locale: "en_IN",
+
+    type: "article",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function BestOpticalShopPage() {

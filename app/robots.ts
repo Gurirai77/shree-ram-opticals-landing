@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
     },
 
     sitemap:
-      "https://shree-ram-opticals-landing.vercel.app/sitemap.xml",
+      "https://www.shreeramopticals.in/sitemap.xml",
   };
 }

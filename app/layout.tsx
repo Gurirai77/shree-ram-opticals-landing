@@ -19,6 +19,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.shreeramopticals.in"),
+
   title:
     "Shree Ram Opticals Sirsa | Best Optical Shop In Sirsa",
 
@@ -27,29 +29,41 @@ export const metadata: Metadata = {
 
   keywords: [
     "Shree Ram Opticals",
-    "Shree Ram Opticals Sirsa",
     "Best Optical Shop in Sirsa",
-    "Optical Shop in Sirsa",
-    "Sunglasses Shop in Sirsa",
-    "Eyeglasses in Sirsa",
-    "Contact Lens in Sirsa",
-    "Premium Eyewear Sirsa",
+    "Eyewear Shop Sirsa",
+    "Sunglasses Shop Sirsa",
+    "Eye Checkup Sirsa",
+    "Contact Lens Sirsa",
   ],
 
   verification: {
-  google: "sCeKDx4oxVCOn4biAovEf2uLzvEo2mZnyXnX1sqqpPI",
-},
+    google: "sCeKDx4oxVCOn4biAovEf2uLzvEo2mZnyXnX1sqqpPI",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 
   openGraph: {
-    title:
-      "Shree Ram Opticals Sirsa",
-
+    title: "Shree Ram Opticals Sirsa",
     description:
       "Premium eyewear and luxury optical collections in Sirsa.",
 
+    url: "https://www.shreeramopticals.in",
+
+    siteName: "Shree Ram Opticals",
+
     images: [
-      "/shree_ram_opticals_banner_1_resized.png",
+      {
+        url: "/shree_ram_opticals_banner_1_resized.png",
+        width: 1200,
+        height: 630,
+      },
     ],
+
+    locale: "en_IN",
+    type: "website",
   },
 };
 
