@@ -34,7 +34,17 @@ export default function SunglassesPage() {
         />
 
         <div className={styles.heroContent}>
+
+          <div className={styles.luxuryTags}>
+            <span>PRADA</span>
+
+            <div className={styles.centerLine} />
+
+            <span>DITA</span>
+          </div>
+
           <p>LUXURY SUNGLASSES COLLECTION</p>
+
 
           <h1>
             Bold Sunglasses
@@ -118,11 +128,10 @@ export default function SunglassesPage() {
             {gallery.map((item, index) => (
               <div
                 key={index}
-                className={`${styles.card} ${
-                  index === 0
+                className={`${styles.card} ${index === 0
                     ? styles.largeCard
                     : ""
-                }`}
+                  }`}
               >
                 <Image
                   src={item}
@@ -136,17 +145,17 @@ export default function SunglassesPage() {
         </div>
       </section>
 
- 
 
-<div className={styles.darkTheme}>
-  <Brands />
 
-  <TrendingCollections />
+      <div className={styles.darkTheme}>
+        <Brands />
 
-  <WhyChooseUs />
+        <TrendingCollections />
 
-  <Testimonials />
-</div>
+        <WhyChooseUs />
+
+        <Testimonials />
+      </div>
 
       {/* EXPERIENCE */}
 

@@ -11,7 +11,7 @@ export default function Topbar() {
 
         <p className={styles.centerText}>
   <span className={styles.offerText}>
-    Flat 25% OFF on Sunglasses
+    UPTO 25% OFF on Sunglasses
   </span>
 </p>
 

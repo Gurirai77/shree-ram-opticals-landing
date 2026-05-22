@@ -7,17 +7,21 @@ export default function LuxuryHighlight() {
         <div className={styles.line} />
 
         <div className={styles.content}>
-          <span>FEATURED LUXURY LABELS</span>
+          <span>WHY CHOOSE US</span>
 
-          <h3>
-            PRADA
-          </h3>
+          <div className={styles.highlightBox}>
+            <p>
+              Eye Check Up by Certified Experts
+              <span>✅</span>
+            </p>
 
-          <div className={styles.dot} />
+            <div className={styles.dot} />
 
-          <h3>
-            DITA
-          </h3>
+            <p>
+              Best Eyewear at Best Prices
+              <span>✅</span>
+            </p>
+          </div>
         </div>
 
         <div className={styles.line} />

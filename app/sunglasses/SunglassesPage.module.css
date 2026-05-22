@@ -537,3 +537,100 @@
 .darkTheme :global(.description) {
   color: rgba(255,255,255,0.68) !important;
 }
+
+
+.luxuryTags {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+
+  animation: fadeLuxury 1.4s ease;
+}
+
+.luxuryTags span {
+  font-size: 13px;
+
+  letter-spacing: 5px;
+
+  font-weight: 600;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  position: relative;
+
+  transition: all 0.3s ease;
+}
+
+.luxuryTags span::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212, 175, 55, 0.8),
+    transparent
+  );
+
+  opacity: 0.8;
+}
+
+.centerLine {
+  flex: 1;
+
+  height: 1px;
+
+  margin: 0 22px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212, 175, 55, 0.35),
+    transparent
+  );
+}
+
+@keyframes fadeLuxury {
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .luxuryTags {
+    margin-bottom: 14px;
+  }
+
+  .luxuryTags span {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .centerLine {
+    margin: 0 10px;
+  }
+}
