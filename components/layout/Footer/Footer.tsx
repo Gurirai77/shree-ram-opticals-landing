@@ -111,7 +111,7 @@ My Email: ${email}`;
 
                         <p>
                             Crafting clarity, luxury and confidence
-                            since 1959. Premium eyewear for every
+                            since 2013. Premium eyewear for every
                             vision and every moment.
                         </p>
 
