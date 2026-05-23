@@ -104,6 +104,63 @@ export default function RootLayout({
   `}
         </Script>
 
+        <Script
+  id="local-business-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Optician",
+
+      name: "Shree Ram Opticals",
+
+      image:
+        "https://www.shreeramopticals.in/shree_ram_opticals_banner_optimized.jpg",
+
+      url: "https://www.shreeramopticals.in",
+
+      telephone: "+91 97292 67890",
+
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "Goll Diggi, Begu Rd, near Aggarsain School, Sukh Sagar Colony",
+
+        addressLocality: "Sirsa",
+
+        addressRegion: "Haryana",
+
+        postalCode: "125055",
+
+        addressCountry: "IN",
+      },
+
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+          ],
+
+          opens: "10:00",
+
+          closes: "20:30",
+        },
+      ],
+
+      sameAs: [
+        "https://www.instagram.com/shreeramopticalssirsa",
+      ],
+    }),
+  }}
+/>
+
         <Topbar />
         <Navbar />
         <WhatsAppButton />
