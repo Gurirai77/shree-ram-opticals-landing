@@ -257,7 +257,7 @@ My Email: ${email}`;
                             <MapPin size={18} />
 
                             <span>
-                                Sirsa, Haryana, India
+                                Goll Diggi, Begu Rd, near Aggarsain School, Sukh Sagar Colony, Sirsa, Haryana 125055
                             </span>
                         </a>
 
