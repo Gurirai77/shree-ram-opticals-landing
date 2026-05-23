@@ -38,7 +38,7 @@ export const metadata = {
 
     images: [
       {
-        url: "/shree_ram_opticals_banner_1_resized.png",
+        url: "/shree_ram_opticals_banner_optimized.jpg",
         width: 1200,
         height: 630,
       },
